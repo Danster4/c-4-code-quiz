@@ -27,3 +27,53 @@ header h2 {
   font-size: 20px;
   color: black;
 }
+
+main {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 100px;
+  margin-bottom: 450px;
+}
+
+#main-title {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  width: 70%;
+  padding-bottom: 30px;
+}
+
+#main-content {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  padding-bottom: 20px;
+}
+
+#main-button-section {
+  display: flex;
+  justify-content: center;
+  
+}
+
+.startButton {
+  background-color: blueviolet;
+  color: white;
+}
+
+.startButton:hover {
+  background-color: lightgreen;
+  color: black;
+}
+
+footer {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  margin-top: auto;
+  margin-right: 35px;
+  /* position: fixed;
+  bottom: 0;  */
+}
