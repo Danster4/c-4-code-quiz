@@ -3,15 +3,48 @@ var main = document.querySelector("#main")
 var mainTitle = document.querySelector("#main-title")
 var mainContent = document.querySelector("#main-content")
 var mainButtonSection = document.querySelector("#main-button-section")
-
-// var quiz = function(event) {
-//   // var h1QuizEl = document.createElement('h1')
-//   // h1QuizEl.textContent = 'Coding Quiz!'
-//   // h1QuizEl.setAttribute('style', 'margin: auto; width: 50%; text-align: center;');
-//   // mainTitle.appendChild(h1QuizEl)
-// }
+var lowerSection = document.querySelector("#lower-section")
 
 
+// array of questions
+var questionsList = [
+  {
+    question: "What is Danny\'s favorite color?", 
+    answers: {
+      a: "Blue",
+      b: "Yellow",
+      c: "Green",
+      d: "Red"
+    },
+    correctAnswer: "c"
+  },
+      
+  {
+    question: "What is Danny\'s favorite number?", 
+    answers: {
+      a: "25",
+      b: "4",
+      c: "42",
+      d: "208"
+    },
+    correctAnswer: "b"
+  },
+
+  {
+    question: "What is Danny\'s favorite city?", 
+    answers: {
+      a: "Syracuse",
+      b: "Tampa",
+      c: "Ljublijana",
+      d: "Chicago"
+    },
+    correctAnswer: "c"
+  },
+]
+
+var quiz = function() {
+
+}
 
 
 // function for start page
@@ -34,33 +67,105 @@ var startPage = function() {
   startButton.setAttribute('style', 'margin: auto; width: 10%; text-align: center; border-radius: 15px;');
   mainButtonSection.appendChild(startButton)
 
-  // startButton.addEventListener('click', quiz())
+  startButton.addEventListener('click', function(){
+    h1StartEl.remove();
+    paragraphStartEl.remove();
+    startButton.remove();   
+
+    quiz();
+  });
 }
 
-// array of questions
-var questions = [
-  {q: "What is Danny\'s favorite color?", 
-    a: "Blue",
-    a: "Yellow",
-    a: "Green",
-    a: "Red"
-  },
+var score = 0;
+
+var countdown = 75;
+
+var questionNumber = 1
+
+
+
+
+startPage();
+
+
+
+// var quiz = function() {
+//   for (var i = 0; i < questionsList.length; i++) {
+//     var h1QuizEl = document.createElement('h1')
+//     h1QuizEl.textContent = 'Question ' + questionNumber
+//     h1QuizEl.setAttribute('style', 'margin: auto; width: 50%; text-align: center;');
+//     mainTitle.appendChild(h1QuizEl)
+
+//     var questionTitleEl 
+//     // = document.querySelector(questionsList[i].question)
+//     questionTitleEl = document.createElement('h2')
+//     questionTitleEl.textContent = "HEre is question"
+//     mainContent.appendChild(questionTitleEl)
+
+    
+
+//     questionNumber++;
+
+//   };
+// }
+    
+  // for (var i = 0; i < questionsList.length; i++) {
+
+  //   var h1QuizEl = document.createElement('h1')
+  //   h1QuizEl.textContent = 'Question ' + questionNumber
+  //   h1QuizEl.setAttribute('style', 'margin: auto; width: 50%; text-align: center;');
+  //   mainTitle.appendChild(h1QuizEl)
+
+  //   var questionDisplayed = document.createElement('h2')
+  //   questionDisplayed = questionsList[i].question
+  //   questionDisplayed.setAttribute('style', 'margin: auto; width: 50%; text-align: center;');
+  //   mainContent.appendChild(questionDisplayed)
+
+  //   var answer = questionsList[i].correctAnswer
+  //   var answerChoices = document.createElement("button")
+  //   answerChoices = questionsList[i].answers
+
+  //   if ()
+
+
+    // var questionTitle = createElement="h3"
+    // questionTitle.textContent = questionsList[i].question
+    // mainContent.appendChild(questionTitle)
+
+
+    
+    
+    // questionNumber++;
+    
+//   }
+
+// }
+    
+
+  // var questionChoices = 
   
-  {q: "What is Danny\'s favorite number", 
-    a: "4",
-    a: "15",
-    a: "7",
-    a: "21"
-  },
+  // var submitButton = document.createElement("button")
+    // submitButton.className = "submitButton"
+    // submitButton.textContent = 'Submit'
+    // submitButton.setAttribute('style', 'margin: auto; width: 10%; text-align: center; border-radius: 15px;');
+    // mainButtonSection.appendChild(submitButton)
 
-  {q: "What is Danny\'s favorite ice cream flavor?", 
-    a: "Rocky Road",
-    a: "Vanilla",
-    a: "Caramel",
-    a: "Chocolate"
-  },
-]
 
+
+
+    // if (
+    //     (answer === true && questions[i].a === "True") ||
+    //     (answer === false && questions[i].a === "False")
+    // ){
+    //   score++;
+    //   alert('You got the right answer! Noice!');
+    // } else {
+    //   // var wrongAnswerDisplay = document.createElement("h2")
+    //   // wrongAnswerDisplay.textContent = "Wrong Answer!"
+    //   // lowerSection.appendChild(wrongAnswerDisplay);
+    // }
+  
+  
 // variable to keep track of the user's score
 // var score = 0;
 
@@ -68,4 +173,41 @@ var questions = [
 //   var answer = 
 // }
 
-startPage();
+ // dot notation for objects
+
+      // var output =[];
+
+      // questionsList.forEach (
+      //   (currentQuestion, questionNumber) => {
+
+      //     var answers = [];
+
+      //     for(letter in currentQuestion.answers) {
+
+      //       answers.push (
+      //         `<label>
+      //         <input type="radio" name="question${questionNumber}" value="${letter}">
+      //         ${letter} :
+      //         ${currentQuestion.answers[letter]}
+      //       </label>`
+      //       );
+      //     }
+      //   }
+      // )
+
+
+      // var correctAnswerSelected = function() {
+      //   score++;
+      //   var correctHeadingEl = document.createElement('h1')
+      //   correctHeadingEl.textContent = 'Correct!'
+      //   lowerSection.appendChild(correctHeadingEl)
+        
+      // }
+      
+      // var wrongAnswerSelected = function() {
+      
+      //   var wrongHeadingEl = document.createElement('h1')
+      //   wrongHeadingEl.textContent = 'Wrong!'
+      //   lowerSection.appendChild(wrongHeadingEl)
+        
+      // }
