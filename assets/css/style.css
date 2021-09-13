@@ -65,6 +65,10 @@ main {
   
 }
 
+#list-item {
+  list-style-type: none;
+}
+
 .startButton {
   background-color: blueviolet;
   color: white;

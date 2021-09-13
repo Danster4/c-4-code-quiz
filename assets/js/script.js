@@ -3,7 +3,14 @@ var main = document.querySelector("#main")
 var mainTitle = document.querySelector("#main-title")
 var mainContent = document.querySelector("#main-content")
 var mainButtonSection = document.querySelector("#main-button-section")
+var timer = document.querySelector("#timer")
 var lowerSection = document.querySelector("#lower-section")
+
+var score = 0;
+
+var countdown = 75;
+
+var questionNumber = 1
 
 
 // array of questions
@@ -42,8 +49,57 @@ var questionsList = [
   },
 ]
 
+
+
+var countdownFunc = function() {
+  var countdown = 75;
+
+  var timeInterval = setInterval(function() {
+    if (countdown === 0) {
+      timer.textContent = ""
+      clearInterval(timeInterval)
+      // (add) link to high score page below... 
+
+    } else {
+      timer.textContent = "Time: " + countdown;
+      countdown--;
+    }
+   }, 1000);
+}
+
+
+
+
 var quiz = function() {
 
+  countdownFunc();
+
+
+  for (var i = 0; i <questionsList.length; i++) {
+    var answer =[]
+    
+    var questionTitle = document.createElement = "h3"
+    questionTitle = questionsList[i].question
+    mainContent.appendChild(questionTitle)
+
+    var answerChoices = document.querySelector("#list-item")
+    answerChoices.textContent("answer 1")
+    mainContent.appendChild(answerChoices)
+
+
+    if (
+      (answer === correctAnswer)
+    ){
+      score++;
+      var rightAnswerDisplay = document.createElement("h2")
+      rightAnswerDisplay.textContent = "Right Answer!"
+      lowerSection.appendChild(rightAnswerDisplay);
+    } else {
+      var wrongAnswerDisplay = document.createElement("h2")
+      wrongAnswerDisplay.textContent = "Wrong Answer!"
+      lowerSection.appendChild(wrongAnswerDisplay);
+    }
+  }
 }
 
 
@@ -67,20 +123,14 @@ var startPage = function() {
   startButton.setAttribute('style', 'margin: auto; width: 10%; text-align: center; border-radius: 15px;');
   mainButtonSection.appendChild(startButton)
 
-  startButton.addEventListener('click', function(){
+  startButton.addEventListener('click', function() {
     h1StartEl.remove();
     paragraphStartEl.remove();
-    startButton.remove();   
-
+    startButton.remove(); 
     quiz();
   });
 }
 
-var score = 0;
-
-var countdown = 75;
-
-var questionNumber = 1
 
 
 
