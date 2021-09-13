@@ -44,7 +44,7 @@ var questionsList = [
       b: "Tampa",
       c: "Ljublijana",
       d: "Chicago"
-    },
+  },
     correctAnswer: "c"
   },
 ]
