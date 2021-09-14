@@ -63,20 +63,28 @@ main {
 #main-button-section {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   width: auto;
+  margin: auto;
+  padding: 0 10px;
+
   
 }
 
 .answerChoiceButtons {
   background-color: blueviolet;
   color: white;
-  padding: 5px 0;
+  padding: 7px 17px;
+  border-radius: 15px;
 }
 
 .answerChoiceButtons:hover {
   background-color: lightgreen;
   color: black;
+  padding: 7px 17px;
+  border-radius: 15px;
 }
+
 #main-sub-content {
   display: flex;
   justify-content: center;
@@ -92,6 +100,7 @@ main {
   background-color: blueviolet;
   color: white;
   padding: 5px 0;
+  width: 100%;
 }
 
 .startButton:hover {

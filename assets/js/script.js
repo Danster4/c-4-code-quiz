@@ -131,7 +131,7 @@ var startPage = function () {
   startButton.textContent = "Start Code Quiz";
   startButton.setAttribute(
     "style",
-    "margin: auto; width: 10%; text-align: center; border-radius: 15px;"
+    "margin: auto; text-align: center; padding: 7px 17px; border-radius: 15px;"
   );
   mainButtonSection.appendChild(startButton);
 

@@ -82,6 +82,7 @@ main {
   justify-content: center;
   margin: auto;
   padding-bottom: 20px;
+  width: 50%;
 }
 
 #list-item {
