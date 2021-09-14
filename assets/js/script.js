@@ -2,6 +2,7 @@
 var main = document.querySelector("#main");
 var mainTitle = document.querySelector("#main-title");
 var mainContent = document.querySelector("#main-content");
+var mainSubContent = document.querySelector("#main-sub-content")
 var mainButtonSection = document.querySelector("#main-button-section");
 var timer = document.querySelector("#timer");
 var lowerSection = document.querySelector("#lower-section");
@@ -61,21 +62,31 @@ var quiz = function (i) {
 
   var answerChoice1 = document.createElement("button");
   answerChoice1.innerHTML = questionsList[i].answers[0];
-  mainContent.appendChild(answerChoice1);
+  answerChoice1.className = "answerChoiceButtons"
+  mainButtonSection.appendChild(answerChoice1);
 
   var answerChoice2 = document.createElement("button");
   answerChoice2.innerHTML = questionsList[i].answers[1];
-  mainContent.appendChild(answerChoice2);
+  answerChoice2.className = "answerChoiceButtons"
+  mainButtonSection.appendChild(answerChoice2);
 
   var answerChoice3 = document.createElement("button");
   answerChoice3.innerHTML = questionsList[i].answers[2];
-  mainContent.appendChild(answerChoice3);
+  answerChoice3.className = "answerChoiceButtons"
+  console.log(answerChoice3)
+  mainButtonSection.appendChild(answerChoice3);
 
   var answerChoice4 = document.createElement("button");
   answerChoice4.innerHTML = questionsList[i].answers[3];
-  mainContent.appendChild(answerChoice4);
+  answerChoice4.className = "answerChoiceButtons"
+  mainButtonSection.appendChild(answerChoice4);
 
-  if (answer === correctAnswer) {
+  // var correctAnswer = (questionsList[i].correctAnswer[0])
+  // answer === questionsList[i].correctAnswer
+  // (answer === "Green") || (answer === "4") || (answer === "Ljublijana") 
+  
+
+  if (answer === correctAnswer){
     score++;
     var rightAnswerDisplay = document.createElement("h2");
     rightAnswerDisplay.textContent = "Right Answer!";
@@ -83,6 +94,7 @@ var quiz = function (i) {
     questionNumber++;
     quiz(questionNumber);
   } else {
+    countdown-10;
     var wrongAnswerDisplay = document.createElement("h2");
     wrongAnswerDisplay.textContent = "Wrong Answer!";
     lowerSection.appendChild(wrongAnswerDisplay);

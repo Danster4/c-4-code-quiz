@@ -1,0 +1,121 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+header {
+  display: flex;
+  justify-content: space-between;
+  flex: wrap;
+  position: sticky;
+  position: -webkit-sticky;
+  background-attachment: fixed;
+  background-size: cover;
+  padding: 20px 40px;
+  z-index: 9999;
+}
+
+header div a {
+  text-decoration: none;
+  color: blueviolet;
+  font-size: 20px;
+  padding: 10px;
+}
+
+header div a:hover {
+  background-color: lightgreen;
+  color: black;
+  border-radius: 10px;
+}
+
+header h2 {
+  font-size: 20px;
+  color: black;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 100px;
+  margin-bottom: 450px;
+}
+
+#main-title {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  width: 70%;
+  padding-bottom: 30px;
+}
+
+#main-content {
+  display: flex;
+  justify-content: center;
+  flex: 1;
+  margin: auto;
+  padding-bottom: 20px;
+}
+
+#main-button-section {
+  display: flex;
+  justify-content: space-between;
+  width: auto;
+  
+}
+
+.answerChoiceButtons {
+  background-color: blueviolet;
+  color: white;
+  padding: 5px 0;
+}
+
+.answerChoiceButtons:hover {
+  background-color: lightgreen;
+  color: black;
+}
+#main-sub-content {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  padding-bottom: 20px;
+}
+
+#list-item {
+  list-style-type: none;
+}
+
+.startButton {
+  background-color: blueviolet;
+  color: white;
+  padding: 5px 0;
+}
+
+.startButton:hover {
+  background-color: lightgreen;
+  color: black;
+}
+
+.submitButton {
+  background-color: blueviolet;
+  color: white;
+  padding: 5px 0;
+}
+
+.submitButton:hover {
+  background-color: lightgreen;
+  color: black;
+}
+
+footer {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  margin-top: auto;
+  margin-right: 35px;
+  /* position: fixed;
+  bottom: 0;  */
+}
