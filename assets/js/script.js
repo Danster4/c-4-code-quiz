@@ -18,13 +18,13 @@ var questionNumber = 0;
 var questionsList = [
   {
     question: "What is Danny's favorite color?",
-    answers: [ "Blue", "Yellow", "Green", "Red",],
+    answers: [ "Blue", "Yellow", "Green", "Red"],
     correctAnswer: "Green",
   },
 
   {
     question: "What is Danny's favorite number?",
-    answers: ["25", "4", "42", "208",],
+    answers: ["25", "4", "42", "208"],
     correctAnswer: "4",
   },
 
@@ -50,11 +50,15 @@ var countdownFunc = function () {
   }, 1000);
 };
 
-var quiz = function (i) {
+
+var answer 
+
+
+var renderQuestion = function (i) {
   countdownFunc();
 
   // for (var i = 0; i <questionsList.length; i++) {
-  var answer = [];
+  
 
   var questionTitle = document.createElement("h3");
   questionTitle.innerHTML = questionsList[i].question;
@@ -63,46 +67,100 @@ var quiz = function (i) {
   var answerChoice1 = document.createElement("button");
   answerChoice1.innerHTML = questionsList[i].answers[0];
   answerChoice1.className = "answerChoiceButtons"
+  answerChoice1.addEventListener("click", function(event) {
+    answer = event.target.textContent
+    console.log(event.target.textContent)
+  })
   mainButtonSection.appendChild(answerChoice1);
 
   var answerChoice2 = document.createElement("button");
   answerChoice2.innerHTML = questionsList[i].answers[1];
   answerChoice2.className = "answerChoiceButtons"
+  answerChoice2.addEventListener("click", function(event) {
+    answer = event.target.textContent
+    console.log(event.target.textContent)
+  })
   mainButtonSection.appendChild(answerChoice2);
 
   var answerChoice3 = document.createElement("button");
   answerChoice3.innerHTML = questionsList[i].answers[2];
   answerChoice3.className = "answerChoiceButtons"
-  console.log(answerChoice3)
+  answerChoice3.addEventListener("click", function(event) {
+    answer = event.target.textContent
+    console.log(event.target.textContent)
+  })
   mainButtonSection.appendChild(answerChoice3);
 
   var answerChoice4 = document.createElement("button");
   answerChoice4.innerHTML = questionsList[i].answers[3];
   answerChoice4.className = "answerChoiceButtons"
+  answerChoice4.addEventListener("click", function(event) {
+    answer = event.target.textContent
+    console.log(event.target.textContent)
+  })
   mainButtonSection.appendChild(answerChoice4);
+}
+
+  for (var i = 0; i <questionsList.length; i++) {
+    mainButtonSection.addEventListener("click", function(event) {
+        if (answer === questionsList[i].correctAnswer){
+          console.log(answer)
+          score++;
+          var rightAnswerDisplay = document.createElement("h2");
+          rightAnswerDisplay.textContent = "Right Answer!";
+          lowerSection.appendChild(rightAnswerDisplay);
+          questionNumber++;
+          questionTitle.remove();
+          answerChoice1.remove();
+          answerChoice2.remove();
+          answerChoice3.remove();
+          answerChoice4.remove();
+          renderQuestion(questionNumber);
+        } else {
+          countdown--;
+          var wrongAnswerDisplay = document.createElement("h2");
+          wrongAnswerDisplay.textContent = "Wrong Answer!";
+          lowerSection.appendChild(wrongAnswerDisplay);
+          questionNumber++;
+          questionTitle.remove();
+          answerChoice1.remove();
+          answerChoice2.remove();
+          answerChoice3.remove();
+          answerChoice4.remove();
+          renderQuestion(questionNumber);
+        }
+    })
+  };
+     
+  
+
 
   // var correctAnswer = (questionsList[i].correctAnswer[0])
   // answer === questionsList[i].correctAnswer
   // (answer === "Green") || (answer === "4") || (answer === "Ljublijana") 
-  
 
-  if (answer === correctAnswer){
-    score++;
-    var rightAnswerDisplay = document.createElement("h2");
-    rightAnswerDisplay.textContent = "Right Answer!";
-    lowerSection.appendChild(rightAnswerDisplay);
-    questionNumber++;
-    quiz(questionNumber);
-  } else {
-    countdown-10;
-    var wrongAnswerDisplay = document.createElement("h2");
-    wrongAnswerDisplay.textContent = "Wrong Answer!";
-    lowerSection.appendChild(wrongAnswerDisplay);
-    questionNumber++;
-    quiz(questionNumber);
-  }
-// };
-}
+// var startGame = function() {
+
+//   for (var i = 0; i <questionsList.length; i++) {
+//     renderQuestion(i);
+
+//     if (answer === questionsList[i].correctAnswer){
+//       score++;
+//       var rightAnswerDisplay = document.createElement("h2");
+//       rightAnswerDisplay.textContent = "Right Answer!";
+//       lowerSection.appendChild(rightAnswerDisplay);
+//       questionNumber++;
+//       quiz(questionNumber);
+//     } else {
+//       countdown-10;
+//       var wrongAnswerDisplay = document.createElement("h2");
+//       wrongAnswerDisplay.textContent = "Wrong Answer!";
+//       lowerSection.appendChild(wrongAnswerDisplay);
+//       questionNumber++;
+//       quiz(questionNumber);
+//     }
+//   }
+// }
 
 // function for start page
 var startPage = function () {
@@ -139,7 +197,7 @@ var startPage = function () {
     h1StartEl.remove();
     paragraphStartEl.remove();
     startButton.remove();
-    quiz(questionNumber);
+    renderQuestion(questionNumber);
   });
 };
 
