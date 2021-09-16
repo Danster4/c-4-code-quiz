@@ -1,13 +1,33 @@
 var main = document.querySelector("#main")
 var mainTitle = document.querySelector("#main-title")
+var scoreAchievedSection = document.querySelector("#score-achieved")
 var mainAboveContent = document.querySelector("#main-above-content")
 var mainContent = document.querySelector("#main-content")
 var mainSubContent = document.querySelector("#main-sub-content")
 var mainButtonSection = document.querySelector("#main-button-section")
 var timer = document.querySelector("#timer")
 var lowerSection = document.querySelector("#lower-section")
-
 var formEl = document.querySelector(".nameForm")
+
+var score = localStorage.getItem("score")
+var highscore = 0;
+var storedHighScore = localStorage.getItem("highscore")
+
+
+
+// function determineScore() {
+//   var scoreAchieved = localStorage.getItem("score")
+
+//   if (highscore !== null) {
+//     if (storedHighScore || score > parseInt(storedHighScore)) {
+//       localStorage.setItem("highscore", score);
+//   }
+  
+//   var storedHighScore = localStorage.getItem("highscore");
+
+
+// }
+
 
 
 var highScoresH1 = document.createElement("h1")
@@ -15,12 +35,25 @@ var highScoresH1 = document.createElement("h1")
   highScoresH1.setAttribute('style', 'margin: auto; width: 50%; text-align: center;');
   mainTitle.appendChild(highScoresH1);
 
+var highScoreAchieved = document.createElement("h3")
+  highScoreAchieved.textContent = 'You recieved a score of ' + score 
+  highScoreAchieved.setAttribute('style', 'margin: auto; width: 50%; text-align: center;');
+  scoreAchievedSection.appendChild(highScoreAchieved);
+
 var highScoresP = document.createElement("p")
   highScoresP.textContent = 'Please type your name to save your high score!'
   highScoresP.setAttribute('style', 'margin: auto; width: 50%; text-align: center;');
   mainAboveContent.appendChild(highScoresP);
 
 // insert table here
+
+var nameForm = document.createElement('textarea')
+  nameForm.className = "nameForm"
+  nameForm.setAttribute('style', 'margin: auto; width: 100%; text-align: center;');
+  nameForm.setAttribute('placeholder', "Enter Name Here");
+  nameForm.setAttribute('name', 'user-name');
+  mainContent.appendChild(nameForm)
+
 
 var highScoresList = document.createElement("h3")
   highScoresList.textContent = "John - 10 points"
@@ -32,12 +65,7 @@ var highScoresList = document.createElement("h3")
   // use .getItem to put name value key from localStorage into form
 
 // insert form to fill out name
-var nameForm = document.createElement('textarea')
-  nameForm.className = "nameForm"
-  nameForm.setAttribute('style', 'margin: auto; width: 100%; text-align: center;');
-  nameForm.setAttribute('placeholder', "Enter Name Here");
-  nameForm.setAttribute('name', 'user-name');
-  mainContent.appendChild(nameForm)
+
   // nameForm.setAttribute(type, 'tex')
 
 
@@ -67,4 +95,4 @@ var submitButton = document.createElement("button")
   submitButton.addEventListener("submit", submitHSFunction);
   // use .setItem to put name value key into localStorage
 
-  
+  // determineScore()

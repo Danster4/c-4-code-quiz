@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz</title>
+  <link rel="stylesheet" href="./assets/css/quiz-styles.css">
+</head>
+
+<body>
+  <header class="header" id="header">
+    <div class="button-container">
+      <a href="./index.html">Home</a>
+    </div>
+      <h2 class="timer" id="timer"></h2>
+  </header>  
+
+  <main class="container" id="container">
+    <div class="question-container">
+      <div id="question">
+      </div>
+      <div id="answer-buttons-box">
+        <button id="button-choice-1" class="answerChoiceButtons"></button>
+        <button id="button-choice-2" class="answerChoiceButtons"></button>
+        <button id="button-choice-3" class="answerChoiceButtons"></button>
+        <button id="button-choice-4" class="answerChoiceButtons"></button>
+      </div>
+    </div>
+
+    <div class="controls">
+      <!-- <button id="start-btn" class="start-btn btn">Start</button> -->
+      <button id="next-button" class="next-button hide">Next</button>
+    </div>
+
+    <div id="correctness">
+      <h2></h2>
+    </div>
+
+  </main>
+
+
+  <footer>
+    <p>
+      &copy; 2021 Daniel Urkov
+    </p>
+  </footer>
+
+  <script src="./assets/js/quiz.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,157 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+header {
+  display: flex;
+  justify-content: space-between;
+  flex: wrap;
+  position: sticky;
+  position: -webkit-sticky;
+  background-attachment: fixed;
+  background-size: cover;
+  padding: 20px 40px;
+  z-index: 9999;
+}
+
+header div a {
+  text-decoration: none;
+  color: blueviolet;
+  font-size: 20px;
+  padding: 10px;
+}
+
+header div a:hover {
+  background-color: lightgreen;
+  color: black;
+  border-radius: 10px;
+}
+
+header h2 {
+  font-size: 20px;
+  color: black;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 100px;
+  margin-bottom: 450px;
+}
+
+#question {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  width: 70%;
+  padding-bottom: 30px;
+  font-size: 22px;
+}
+
+#answer-buttons {
+  display: flex;
+  justify-content: center;
+  flex: 1;
+  margin: auto;
+  padding-bottom: 20px;
+}
+
+#controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: auto;
+  margin: auto;
+  padding: 0 10px;
+
+  
+}
+
+#answer-buttons-box {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+  
+}
+
+
+.answerChoiceButtons {
+  background-color: blueviolet;
+  color: white;
+  padding: 7px 17px;
+  border-radius: 15px;
+  margin: 0 10px;
+}
+
+.answerChoiceButtons:hover {
+  opacity: 80%;
+}
+
+.button-correct {
+  background-color: green;
+  color: white;
+}
+
+.button-wrong {
+  background-color: red;
+  color: white;
+}
+
+#main-sub-content {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  padding-bottom: 20px;
+}
+
+#list-item {
+  list-style-type: none;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+}
+
+.next-button {
+  background-color: blue;
+  color: white;
+  padding: 7px 7px;
+  border-radius: 15px;
+  width: 5%;
+  margin-bottom: 20px;
+}
+
+.next-button:hover {
+  opacity: 80%;
+}
+
+.submitButton {
+  background-color: blueviolet;
+  color: white;
+  padding: 5px 0;
+}
+
+.submitButton:hover {
+  background-color: lightgreen;
+  color: black;
+}
+
+footer {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  margin-top: auto;
+  margin-right: 35px;
+  /* position: fixed;
+  bottom: 0;  */
+}
+
+.hide {
+  display: none;
+}
