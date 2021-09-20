@@ -3,9 +3,9 @@ Challenge 4: Web APIs Challenge: Code Quiz
 
 ## Links:
 ### Link to Deployed Application:
-https://danster4.github.io/c-4-coding-quiz
+https://danster4.github.io/c-4-code-quiz
 ### Link to GitHub Repository:
-https://github.com/Danster4/c-4-coding-quiz
+https://github.com/Danster4/c-4-code-quiz
 
 
 ## User Story:
