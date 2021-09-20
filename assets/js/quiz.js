@@ -62,20 +62,6 @@ var questionsList = [
   },
 ];
 
-// function wrongAnswerDisplay() {
-//   wrongAnswer = document.createElement("h2")
-//   wrongAnswer.textContent = "Wrong!"
-//   wrongAnswer.setAttribute("style", "color: red; font-size: 30px; text-align: center")
-//   correctnessDisplayEl.appendChild(wrongAnswer)
-// }
-
-// function correctAnswerDisplay() {
-//   score++;
-//   correctAnswer = document.createElement("h2")
-//   correctAnswer.textContent = "Correct!"
-//   correctAnswer.setAttribute("style", "color: green; font-size: 30px; text-align: center")
-//   correctnessDisplayEl.appendChild(correctAnswer)
-// }
 
 function resetPage() {
   nextButton.classList.add('hide');
@@ -202,52 +188,3 @@ countdownFunc();
 startQuiz();
 
 
-
-
-
-
-
-
-
-
-
-// function startGame() {
-//   currentPageNumber = 0
-//   setNextQuestion();
-// }
-
-
-// function setNextQuestion() {
-//   // resetState();
-//   showQuestion(currentQuestionNumber)
-
-// }
-
-// function showQuestion(questionsList) {
-//   questionEl.innerText = questionsList.question
-//   questionsList.answers.forEach(answers => {
-//     var button = document.createElement("button")
-//     button.innerText = answers.text
-//     button.classList.add("answerChoiceButtons")
-
-//     if (answers.correct) {
-//       button.dataset.correct = answers.correct
-//     }
-//     button.addEventListener("click", selectAnswer)
-//     answerButtonsBoxEl.appendChild(button)
-//   })
-// }
-
-
-// function selectAnswer(event) {
-  
-// }
-
-// function resetPage() {
-//   nextButton.classList.add('.hide')
-  
-// }
-
-
-// countdownFunc();
-// startGame();

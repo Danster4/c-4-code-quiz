@@ -27,4 +27,4 @@ https://github.com/Danster4/c-4-coding-quiz
   * THEN I can save my initials and score
 
 ## Screenshot:
-insert here
+[![c-4-code-quiz-screenshot.png](https://i.postimg.cc/mD95GKG5/c-4-code-quiz-screenshot.png)](https://postimg.cc/5Yx3B7yB)
